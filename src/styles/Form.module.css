@@ -1,0 +1,145 @@
+.form_outer {
+    width: 596px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 66px auto;
+    box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.form_top_box {
+    width: 100%;
+    height: 86px;
+    background-color: #3A3884;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.form_h2 {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 400;
+    padding-left: 58px;
+}
+
+.form_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    margin-bottom: 59px;
+}
+
+.form_inner_reg {
+    margin-bottom: 0;
+}
+
+.container {
+    width: 525px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.input {
+    width: 480px;
+    height: 55px;
+    color: #8695A7;
+    padding: 18px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 2px rgba(64, 64, 64, 0.07);
+}
+
+.pass_reset_link {
+    color: #FC7B53;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 9px;
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: end;
+}
+
+.lines_and_h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 23px;
+    margin-bottom: 18px;
+}
+
+.line {
+    width: 118px;
+    border: 0.25px rgba(134, 149, 167, 0.50) solid;
+}
+
+.lines_and_h4 > h4 {
+    color: #8695A7;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form_h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.form_reg_link {
+    display: flex;
+    gap: 5px;
+}
+
+.form_reg_link > a {
+    color: #406DF3;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.form_login_btn {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    opacity: 0.6;
+    background: #376F36;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 82px;
+    margin-left: 137.67px;
+    cursor: pointer;
+}
+
+.form_reg_btn {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    background: #376F36;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 32px;
+    cursor: pointer;
+    display: flex;
+    margin-top: 33px;
+}
+
+.form_reg_btn_box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

@@ -1,0 +1,72 @@
+.home_bg::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.home {
+    width: 799px;
+    height: 343px;
+    margin: 170px auto;
+    background: linear-gradient(113deg, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.14) 68%);
+    border-radius: 30px;
+    backdrop-filter: blur(100px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 26px;
+}
+
+.home_p {
+    color: #13123E;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.home > p:nth-child(2) {
+    width: 741px;
+    font-size: 32px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    padding-left: 26px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.link_btns {
+    width: 221px;
+    height: 68px;
+    padding: 10px 45px;
+    background: #302C88;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 400;
+    transition: transform 200ms;
+}
+
+.link_btns:hover {
+    transform: scale(1.1);
+}
+
+.buttons > a:nth-child(2){
+    background: none;
+    border: 0.5px #302C88 solid;
+    color: #302C88
+}

@@ -1,0 +1,152 @@
+.header_bgc {
+    width: 100%;
+    background: linear-gradient(180deg, #13123E 34%, rgba(41.80, 39.75, 142.38) 100%);
+}
+
+.header {
+    width: 100%;
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 65px;
+    height: 48px;
+    padding-left: 40px;
+}
+
+.menu_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+    padding-left: 89px;
+    padding-right: 38px;
+}
+
+.navlink_p {
+    position: relative;
+}
+
+.navlink_p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 250ms, transform 250ms;
+}
+
+.navlink_p:hover::after,
+.navlink_p:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 3px, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu_links a.active {
+    color: #FFFFFF;
+}
+
+.menu_links a:not(.active) {
+    opacity: 0.8;
+}
+
+.call_link {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.call_link > p {
+    color: #FFF965;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+    line-height: 19.5px;
+}
+
+.languages {
+    padding-left: 117px;
+}
+
+.languages > select option {
+    background-color: #13123E;
+}
+
+.languages > select{
+    width: 39px;
+    height: 20px;
+    border-radius: 6px;
+    border: 0.8px #F5F5F5 solid;
+    background: transparent;
+    color: #FFFFFF;
+    line-height: 11.7px;
+}
+
+.reg_log {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+.register_box {
+    width: 164px;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register_box p {
+    font-size: 14px;
+    color: #232188;
+}
+
+.login_and_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.username {
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.user_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.user_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.logout_btn {
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+    background: transparent;
+    font-size: 16px;
+}

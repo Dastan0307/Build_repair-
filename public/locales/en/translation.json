@@ -1,0 +1,83 @@
+{
+  "common": {
+    "about": "About us",
+    "build": "Build",
+    "repair": "Repair",
+    "contacts": "Contacts",
+    "callback": "Request a call back",
+    "signup": "Sign up",
+    "signin": "Sign in",
+    "logout": "Sign out",
+    "login-with": "or sign in with",
+    "address": "Address"
+  },
+  "footer": {
+    "street": "Bishkek, Tokombaeva st. 10/2"
+  },
+  "home": {
+    "title": "Fast. Accurate. Convenient",
+    "paragraph": "Calculate the amount of materials and the amount of payment to the builder",
+    "link1": "Build",
+    "link2": "Repair"
+  },
+  "about": {
+    "general-top": "Welcome to our site! We are a team of professionals who created this platform as an assistant for both experienced builders and ordinary citizens who want to calculate the cost of building or renovating their home. Our goal is to provide you with all the information you need to make informed decisions and effectively plan construction and renovation costs.",
+    "general-bottom": "We recognize that properly estimating construction and renovation costs is key to the successful completion of any project. Our main goal is to provide you with intuitive and accurate information that will help you budget, avoid unexpected expenses and achieve the results you want.",
+    "reasons-top": "Why choose us:",
+    "reasons-1": "Professional Experience: Our team includes experienced engineers, architects and builders who have extensive experience in various types of construction and renovation.",
+    "reasons-2": "Accuracy and Reliability: We use cutting-edge costing techniques to account for every detail of your project. Our approach ensures high accuracy and minimizes the risk of underestimating or overestimating costs.",
+    "reasons-3": "Individual approach: We understand that every project is unique. We carefully study your needs and requirements to provide the most accurate cost estimate tailored to your specifications.",
+    "reasons-4": "Transparency: We value openness in our relationships with our clients. You will get complete information about the costs of materials, labor costs and other necessary elements so that you have a clear idea of the costs.",
+    "reasons-5": "Timeliness: We understand that time is of the essence in construction and renovation projects. Our platform is ready to provide you with an estimated cost instantly.",
+    "reasons-bottom": "Whether you need a cost estimate for new construction, renovation or major renovation, our platform will be your trusted partner. With us you will receive not only numbers, but also confidence in the future of your project."
+  },
+  "contacts": {
+    "title": "Contacts",
+    "operator": "Operator",
+    "street": "Tokombaeva st. 10/2"
+  },
+  "login": {
+    "title": "Sign in",
+    "email": "Enter email",
+    "password": "Enter password",
+    "forgot-password": "Forgot your password?",
+    "no-account": "Don't have an account yet?",
+    "register": "Sign up",
+    "warn-email": "Please enter your email address",
+    "warn-password": "Please enter your password"
+  },
+  "register-page": {
+    "title": "Sign up",
+    "name": "Name",
+    "surname": "Surname",
+    "password": "Password",
+    "confirm-password": "Confirm your password",
+    "err-msg": "Please fill out the following field(s):",
+    "msg-name": " Name",
+    "msg-surname": " Surname",
+    "msg-email": " Email",
+    "msg-password": " Password",
+    "msg-password-confirm": " Confirm your password",
+    "invalid-email": "Incorrect email address!",
+    "short-email": "The password must be at least 4 characters",
+    "unmatched-password": "Passwords do not match!",
+    "successful-signup": "Registration completed successfully!"
+  },
+  "selection-panel": {
+    "house": "House",
+    "banya": "Banya",
+    "garage": "Garage",
+    "roof": "Roof",
+    "wall": "Wall",
+    "foundation": "Foundation",
+    "insulation": "Insulation",
+    "kitchen": "Kitchen",
+    "rooms": "Rooms",
+    "bathroom": "Bathroom",
+    "hallway": "Hallway",
+    "apartment": "Apartment",
+    "water-supply": "Water S.",
+    "novostroy": "Novostroy",
+    "electricity": "Electricity"
+  }
+}
