@@ -1,0 +1,100 @@
+.profile_card {
+    width: 383px;
+    height: 100vh;
+    padding: 26px 30px 0 40px;
+    background-color: #FFFFFF;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.avatar_edit {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.line {
+    width: 308px;
+    border: 0.5px #8F8F8F solid;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.h4 {
+    margin-top: 28px;
+    color: #302C88;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.open_modal {
+    color: #13123E;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close_modal_btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding-right: 20px;
+}
+
+.modal_bottom {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 45px;
+}
+
+.p {
+    color: rgba(18.60, 17.72, 61.62, 0.70);
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.fields {
+    color: #13123E;
+}
+
+.fields_box {
+    width: 100%;
+    height: 55px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 2px rgba(64, 64, 64, 0.07);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bd_field {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.last_field {
+    margin-bottom: 60px;
+}

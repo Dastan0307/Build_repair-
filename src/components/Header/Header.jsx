@@ -62,9 +62,9 @@ const Header = () => {
 
                 <div className={styles.languages}>
                     <select value={currentLanguage} onChange={handleLanguageChange}>
-                        <option value="kg">Кыргыз тили</option>
-                        <option value="ru">Русский язык</option>
-                        <option value="en">English</option>
+                        <option value="kg">KG</option>
+                        <option value="ru">RU</option>
+                        <option value="en">EN</option>
                     </select>
                 </div>
 
