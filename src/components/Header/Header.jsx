@@ -55,7 +55,7 @@ const Header = () => {
                     </NavLink>
                 </div>
 
-                <a href={ROUTES.CONTACTS} className={styles.call_link}>
+                <a href={"tel:+996700123456"} className={styles.call_link}>
                     <img src={PHONE} alt="phone"/>
                     <p>{t("common.callback")}</p>
                 </a>
