@@ -1,6 +1,6 @@
 .footer_bgc {
     width: 100%;
-    background: linear-gradient(180deg, rgba(41.80, 39.75, 142.38, 0.85) 11%, #13123E 79%);
+    background: #2C52A0;
 }
 
 .footer {
@@ -17,7 +17,7 @@
     width: 65px;
     height: 48px;
     padding-left: 40px;
-    padding-top: 3px;
+    padding-top: 30px;
 }
 
 .footer_links {

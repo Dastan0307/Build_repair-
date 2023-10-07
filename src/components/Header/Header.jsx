@@ -9,7 +9,7 @@ import {logoutUser} from "../../features/user/userSlice";
 
 import styles from '../../styles/Header.module.css'
 
-import LOGO from '../../images/logo.svg'
+import LOGO from '../../images/logo-dark.svg'
 import USER from '../../images/user-icon.svg'
 import PHONE from '../../images/phone-icon.svg'
 

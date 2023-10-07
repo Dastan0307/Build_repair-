@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import React from 'react';
 import {useDispatch} from "react-redux";
-import {toast} from "react-toastify";
-
+import {Link, useNavigate} from "react-router-dom";
+import {useForm} from "react-hook-form";
+import {yupResolver} from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import {useTranslation} from "react-i18next";
+import {toast} from "react-toastify";
 
 import {ROUTES} from "../../utils/routes";
 import {loginUser} from "../../features/user/userSlice";
@@ -13,42 +15,30 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import styles from '../../styles/Form.module.css'
 
 const Login = () => {
-    const [values, setValues] = useState({
-        email: '',
-        password: ''
-    })
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const {t} = useTranslation()
 
-    const handleChange = ({target: {value, name}}) => {
-        setValues({...values, [name]: value})
-    }
+    const schema = yup.object({
+        email: yup.string().required(`${t("login.warn-email")}`).email(`${t("register-page.invalid-email")}`),
+        password: yup.string().required(`${t("login.warn-password")}`),
+    })
 
-    const validate = () => {
-        let result = true
-        if (values.email === null || values.email === '') {
-            result = false
-            toast.warning(`${t("login.warn-email")}`)
-        }
-        if (values.password === null || values.password === '') {
-            result = false
-            toast.warning(`${t("login.warn-password")}`)
-        }
-        return result
-    }
+    const {handleSubmit, register, formState: {errors}} = useForm({
+        resolver: yupResolver(schema),
+    })
 
-    const handleLogin = async (e) => {
-        e.preventDefault()
-        if (validate()) {
-            try {
-                const loginResult = await dispatch(loginUser(values))
-                if (loginResult.payload) {
-                    navigate(ROUTES.HOME)
-                }
-            } catch (err) {
-                toast.error('Ошибка: ' + err.message)
+    const formSubmit = async (data) => {
+        try {
+            const res = await dispatch(loginUser(data))
+            if (res.error) {
+                alert('Неверные данные!')
+            } else {
+                navigate(ROUTES.HOME)
+                toast.success('Вход выполнен!')
             }
+        } catch (err) {
+            console.log(err)
         }
     }
 
@@ -59,14 +49,14 @@ const Login = () => {
             </div>
             <div className={styles.form_inner}>
                 <div className={styles.container}>
-                    <form onSubmit={handleLogin}>
+                    <form onSubmit={handleSubmit(formSubmit)}>
                         <label className={styles.label}>{t("login.email")}</label>
-                        <input type="email" name='email' className={styles.input} value={values.email}
-                               onChange={handleChange}/>
+                        <input type="email" className={styles.input} {...register("email")}/>
+                        <p className={styles.error__message}>{errors.email?.message}</p>
                         <br/>
                         <label className={styles.label}>{t("login.password")}</label>
-                        <input type="password" name='password' className={styles.input} value={values.password}
-                               onChange={handleChange}/>
+                        <input type="password" className={styles.input} {...register("password")}/>
+                        <p className={styles.error__message}>{errors.password?.message}</p>
                         <br/>
                         <Link to={ROUTES.PASSWORD_RESET} className={styles.pass_reset_link}>{t("login.forgot-password")}</Link>
                         <button type={"submit"} className={styles.form_login_btn}>{t("common.signin")}</button>

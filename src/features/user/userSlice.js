@@ -10,7 +10,7 @@ export const registerUser = createAsyncThunk(
             console.log('user info:', res)
             return res.data.user
         } catch (err) {
-            toast.error('Произошла ошибка: ' + err.message)
+            throw err
         }
     }
 )
@@ -21,19 +21,9 @@ export const loginUser = createAsyncThunk(
         try {
             const res = await axios.post(`http://localhost:8080/login`, userInfo)
             console.log(res.data)
-            if (res.data.user) {
-                toast.success('Вход выполнен!')
-                return res.data.user
-            } else {
-                toast.warning('Неверные данные!')
-                return false
-            }
+            return res.data.user
         } catch (err) {
-            if (err.response.status === 400) {
-                toast.warning('Неверные данные!')
-            } else {
-                toast.error('Произошла ошибка: ' + err.message)
-            }
+            throw err
         }
     }
 )
@@ -89,9 +79,18 @@ const userSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(registerUser.fulfilled, (state, action) => {
             state.currentUser = action.payload
+            state.error = null
+        })
+        builder.addCase(registerUser.rejected, (state, action) => {
+            state.currentUser = null
+            state.error = action.error
         })
         builder.addCase(loginUser.fulfilled, (state, action) => {
             state.currentUser = action.payload
+        })
+        builder.addCase(loginUser.rejected, (state, action) => {
+            state.currentUser = null
+            state.error = action.error
         })
         builder.addCase(googleLogin.fulfilled, (state, action) => {
             state.currentUser = action.payload

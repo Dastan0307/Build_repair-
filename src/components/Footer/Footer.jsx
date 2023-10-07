@@ -7,7 +7,7 @@ import {ROUTES} from "../../utils/routes";
 
 import styles from '../../styles/Footer.module.css'
 
-import LOGO from "../../images/logo.svg";
+import LOGO from "../../images/logo-light.svg";
 import LOCATION from "../../images/location-icon.svg"
 import PHONE from "../../images/phone-icon.svg";
 import WHATSAPP from "../../images/whatsapp-icon.svg";

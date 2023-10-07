@@ -144,3 +144,9 @@
     justify-content: center;
     align-content: center;
 }
+
+.error__message {
+    font-size: 14px;
+    color: #ff0000;
+    padding: 5px 0 0 5px;
+}
