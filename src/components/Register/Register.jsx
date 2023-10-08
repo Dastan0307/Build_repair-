@@ -1,23 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
-import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import {useTranslation} from "react-i18next";
-import {toast} from "react-toastify";
 
-import {ROUTES} from "../../utils/routes";
 import {registerUser} from "../../features/user/userSlice";
 
 import SocialLogin from "../SocialLogin/SocialLogin";
+import PopUpModal from "../PopUpModal/PopUpModal";
 
-import styles from '../../styles/Form.module.css'
+import styles from '../../styles/Form.module.css';
 
 const Register = () => {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const {t} = useTranslation()
+    const [openModal, setOpenModal] = useState(false)
 
     const schema = yup.object({
         name: yup.string().required(`${t("register-page.msg-name")}`),
@@ -37,12 +35,15 @@ const Register = () => {
             if (res.error) {
                 alert('Ошибка данных!')
             } else {
-                toast.success(`${t("register-page.successful-signup")}`)
-                navigate(ROUTES.HOME)
+                setOpenModal(true)
             }
         } catch (err) {
             console.log(err)
         }
+    }
+
+    const closeModal = () => {
+        setOpenModal(false)
     }
 
     return (
@@ -89,6 +90,7 @@ const Register = () => {
                     <SocialLogin />
                 </div>
             </div>
+            <PopUpModal isOpen={openModal} onClose={closeModal} message={t("register-page.successful-signup")}/>
         </div>
     );
 };

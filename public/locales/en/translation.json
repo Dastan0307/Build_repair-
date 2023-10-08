@@ -44,7 +44,8 @@
     "no-account": "Don't have an account yet?",
     "register": "Sign up",
     "warn-email": "Please enter your email address",
-    "warn-password": "Please enter your password"
+    "warn-password": "Please enter your password",
+    "successful-login": "Welcome! You have successfully logged in."
   },
   "register-page": {
     "title": "Sign up",
@@ -58,7 +59,8 @@
     "invalid-email": "Incorrect email address!",
     "short-password": "The password must be at least 4 characters",
     "unmatched-password": "Passwords do not match!",
-    "successful-signup": "Registration completed successfully!"
+    "successful-signup": "Registration completed successfully!",
+    "ok": "OK"
   },
   "selection-panel": {
     "house": "House",

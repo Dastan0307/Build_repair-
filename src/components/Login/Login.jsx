@@ -1,23 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import {useTranslation} from "react-i18next";
-import {toast} from "react-toastify";
 
 import {ROUTES} from "../../utils/routes";
 import {loginUser} from "../../features/user/userSlice";
 
 import SocialLogin from "../SocialLogin/SocialLogin";
 
-import styles from '../../styles/Form.module.css'
+import styles from '../../styles/Form.module.css';
+import PopUpModal from "../PopUpModal/PopUpModal";
 
 const Login = () => {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const {t} = useTranslation()
+    const [openModal, setOpenModal] = useState(false)
 
     const schema = yup.object({
         email: yup.string().required(`${t("login.warn-email")}`).email(`${t("register-page.invalid-email")}`),
@@ -34,12 +34,15 @@ const Login = () => {
             if (res.error) {
                 alert('Неверные данные!')
             } else {
-                navigate(ROUTES.HOME)
-                toast.success('Вход выполнен!')
+                setOpenModal(true)
             }
         } catch (err) {
             console.log(err)
         }
+    }
+
+    const closeModal = () => {
+        setOpenModal(false)
     }
 
     return (
@@ -76,6 +79,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <PopUpModal isOpen={openModal} onClose={closeModal} message={t("login.successful-login")}/>
         </div>
     );
 };

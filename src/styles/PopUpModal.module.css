@@ -1,0 +1,37 @@
+.popup__modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup__modal {
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.popup__modal__text {
+    font-size: 20px;
+}
+
+.popup__modal__btn {
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.popup__modal__btn:hover {
+    background-color: #45a049;
+}
