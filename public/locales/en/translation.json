@@ -57,7 +57,7 @@
     "msg-surname": "Surname is a required field",
     "msg-email": "Email is a required field",
     "invalid-email": "Incorrect email address!",
-    "short-password": "The password must be at least 4 characters",
+    "short-password": "The password must be at least 6 characters",
     "unmatched-password": "Passwords do not match!",
     "successful-signup": "Registration completed successfully!",
     "ok": "OK"

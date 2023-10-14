@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 
 import {ROUTES} from "../../utils/routes";
-import {logoutUser} from "../../features/user/userSlice";
+import {removeUser} from "../../features/user/userSlice";
 
 import styles from '../../styles/Header.module.css'
 
@@ -17,6 +17,7 @@ const activeMenuClass = ({isActive}) => isActive ? styles.active : ''
 
 const Header = () => {
     const currentUser = useSelector(state => state.user.currentUser)
+    const dispatch = useDispatch()
     const {t, i18n} = useTranslation()
     const [currentLanguage, setCurrentLanguage] = useState(i18n.language)
 
@@ -26,9 +27,8 @@ const Header = () => {
         setCurrentLanguage(selectedLanguage)
     }
 
-    const dispatch = useDispatch()
     const handleLogout = () => {
-        dispatch(logoutUser())
+        dispatch(removeUser())
     }
 
     return (
